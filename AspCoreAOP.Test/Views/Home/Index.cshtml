@@ -1,0 +1,25 @@
+﻿@using AspCoreAOP.Test.Models;
+@{
+    ViewData["Title"] = "Home Page";
+
+    var serviceAMessage = ViewBag.ServiceA as OutputDTO;
+    var serviceBMessage = ViewBag.ServiceB as OutputDTO;
+    var serviceCMessage = ViewBag.ServiceC as OutputDTO;
+
+}
+
+<div class="text-center">
+    <br />
+    <br />
+    <h2 class="display-4">Test AOP Application</h2>
+    <br />
+    <br />
+    <p><h4>@serviceAMessage.str </h4></p>
+    <br />
+    <br />
+    <p><h4>@serviceBMessage.str </h4></p>
+    <br />
+    <br />
+    <p><h4>@serviceCMessage.str </h4></p>
+
+</div>
