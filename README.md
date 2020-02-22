@@ -11,7 +11,7 @@ It uses *System.Reflection.DispatchProxy* to enable on the fly proxy creation of
 ```
 
 * **Add AspCoreAOP dll to your project and create your custom interceptors in your project.**
-```
+```csharp
 public class BeforeAspect : InterceptorBase, IBeforeInterceptor
 {
      public BeforeAspect()
@@ -58,7 +58,7 @@ public class ExceptionAspect : InterceptorBase, IExceptionInterceptor
 ```
 
 * **Service types or implementation types can use attribute for interceptor**
-```
+```csharp
    [BeforeAspect(priority = 1)]
    [BeforeAspect1(priority = 2)]
    public interface IServiceA : IService, ISingletonType
@@ -81,18 +81,18 @@ public class ExceptionAspect : InterceptorBase, IExceptionInterceptor
 
 * **Ensure fire the AutoBindWithInterceptors method in Startup.cs**
 
-```
-ProxySelector used AttributeBaseProxySelector as default.
+```csharp
+//ProxySelector used AttributeBaseProxySelector as default.
 
    services.AutoBindWithInterceptors();
 ```
-```
-ProxySelector used with custom class.
+```csharp
+//ProxySelector used with custom class.
 
  services.AutoBindWithInterceptors<TProxyGenerator>();
   ```
-  ```
- Two method used with namespace constraint.
+  ```csharp
+ //Two method used with namespace constraint.
  
  services.AutoBindWithInterceptors(option =>
  {
