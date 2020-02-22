@@ -57,7 +57,7 @@ public class ExceptionAspect : InterceptorBase, IExceptionInterceptor
     
 ```
 
-* ** Service types or implementation types can use attribute for interceptor**
+* **Service types or implementation types can use attribute for interceptor**
 ```
    [BeforeAspect(priority = 1)]
    [BeforeAspect1(priority = 2)]
