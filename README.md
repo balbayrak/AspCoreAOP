@@ -100,4 +100,4 @@ public class ExceptionAspect : InterceptorBase, IExceptionInterceptor
  });
 ```
 # Test Project
-You can see all usage in AspCoreAOP.Test project
+You can see all usage in *AspCoreAOP.Test.csproj* project.
