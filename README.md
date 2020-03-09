@@ -7,10 +7,10 @@ It uses *System.Reflection.DispatchProxy* to enable on the fly proxy creation of
 
 * **Add DependencyInjection package to your project.**
 ```
- PM> Install-Package Microsoft.Extensions.DependencyInjection
+ PM> Install-Package AspCoreAOP.Core
 ```
 
-* **Add AspCoreAOP dll to your project and create your custom interceptors in your project.**
+* **Create your custom interceptors in your project.**
 ```csharp
 public class BeforeAspect : InterceptorBase, IBeforeInterceptor
 {
